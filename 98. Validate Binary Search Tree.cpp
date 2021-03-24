@@ -1,3 +1,18 @@
+/*
+Recursive solution
+
+class Solution {
+public:
+    bool isValidBST(TreeNode* root, long long l=-1e10, long long h = 1e10) {
+        if(root==nullptr) return true;
+        return (root->val>l && root->val < h) && isValidBST(root->left, l, root->val)
+            && isValidBST(root->right,root->val,h);
+    }
+};
+
+*/
+
+// Iterative solution
 class Solution {
 public:
     bool isValidBST(TreeNode* root) {
